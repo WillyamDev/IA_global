@@ -36,10 +36,14 @@ python train_model.py
 Isso treina e salva um modelo para prever o tipo de desastre com base em localização, país, nome do evento e outros atributos históricos.
 
 🌐 Executando a API
+
+
 uvicorn app.main:app --reload
 Abra no navegador: http://127.0.0.1:8000/docs para testar a API interativamente.
 
 📥 Exemplo de Requisição
+
+
 POST /predict-disaster
 {
   "location": "Japan"
@@ -54,11 +58,12 @@ Resposta esperada:
   "predicted_disaster_type": "Flood"
 }
 📊 Sobre o Gráfico
+
 O gráfico gerado (.png) representa os 5 maiores desastres registrados no país informado, com base em número de afetados, extraído do dataset EM-DAT.
 
 📁 Estrutura da Aplicação
-bash
-Copy
+
+
 IA_global/
 ├── app/
 │   └── main.py
