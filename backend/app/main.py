@@ -14,8 +14,9 @@ load_dotenv()
 app = FastAPI()
 
 # Caminho dos arquivos
-csv_file_path = os.getenv("EMDAT_CSV_PATH")
-model_path = os.path.join("data", "public_emdat_custom_request_2025-06-02_4a01e99a-3a89-4154-b5a0-2cdadd208c80_prepared.pkl")
+csv_file_path = os.path.join("app", "data", "data.csv")
+
+model_path = os.path.join("app", "data", "datacsvautalizado.pkl")  # Ajustando o caminho do modelo dentro de app/data
 
 # OpenWeather API
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
@@ -66,8 +67,6 @@ def predict_disaster_type(location: str):
     except Exception as e:
         return f"Erro ao prever desastre: {str(e)}"
 
-
-
 # Gerar gráfico de pizza
 def generate_disaster_graph(location: str):
     try:
@@ -94,7 +93,7 @@ def generate_disaster_graph(location: str):
         fig, ax = plt.subplots(figsize=(8, 8))
         ax.pie(
             top_disasters['Total Affected'],
-            labels=top_disasters['Disaster Type'].fillna('Desastre Desconhecido'),  # Usando 'Disaster Type' em vez de 'Event Name'
+            labels=top_disasters['Disaster Type'].fillna('Desastre Desconhecido'),
             autopct='%1.1f%%',
             startangle=90
         )
