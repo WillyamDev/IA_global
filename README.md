@@ -1,12 +1,15 @@
-🌍 Previsão de Desastres Naturais com FastAPI + OpenWeather + Machine Learning
-Este projeto usa FastAPI, OpenWeather API e Machine Learning para prever o tipo de desastre mais provável em uma determinada localização, além de gerar um gráfico dos principais desastres históricos registrados no banco de dados EM-DAT.
+# 🌍 Previsão de Desastres Naturais com FastAPI + OpenWeather + Machine Learning
 
-🚀 Como Executar o Projeto
-1. Clone o repositório ou extraia o .zip
-Extraia o arquivo Global_Atualizado.zip e entre na pasta:
+Este projeto usa **FastAPI**, **OpenWeather API** e **Machine Learning** para prever o tipo de desastre mais provável em uma determinada localização, além de gerar um gráfico dos principais desastres históricos registrados no banco de dados EM-DAT.
 
-bash
-Copy
+---
+
+## 🚀 Como Executar o Projeto
+
+### 1. Clone o repositório ou extraia o `.zip`
+Extraia o arquivo `Global_Atualizado.zip` e entre na pasta:
+
+```bash
 cd Global
 2. Crie o ambiente virtual (opcional mas recomendado)
 bash
@@ -65,7 +68,7 @@ O gráfico gerado (.png) representa os 5 maiores desastres registrados no país 
 📁 Estrutura da Aplicação
 bash
 Copy
-Global/
+IA_global/
 ├── app/
 │   └── main.py
 ├── data/
