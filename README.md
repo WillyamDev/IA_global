@@ -7,54 +7,74 @@ Este projeto usa **FastAPI**, **OpenWeather API** e **Machine Learning** para pr
 ## 🚀 Como Executar o Projeto
 
 ### 1. Clone o repositório ou extraia o `.zip`
-Extraia o arquivo `Global_Atualizado.zip` e entre na pasta:
 
 ```bash
 cd Global
 2. Crie o ambiente virtual (opcional mas recomendado)
-bash
-Copy
+festança
+
+Cópia
+
+Editar
 python3 -m venv venv
 source venv/bin/activate  # no Linux/Mac
 venv\Scripts\activate  # no Windows
-3. Instale as dependências
-bash
-Copy
-pip install -r requirements.txt
-4. Configure as variáveis de ambiente
-Crie um arquivo .env com o seguinte conteúdo:
+3. Instalar as dependências
+festança
 
-ini
-Copy
+Cópia
+
+Editar
+pip install -r requirements.txt
+4. Configure como variáveis ​​de ambiente
+Crie um arquivo .envcom o seguinte conteúdo:
+
+este
+
+Cópia
+
+Editar
 OPENWEATHER_API_KEY=SUACHAVEAQUI
 EMDAT_CSV_PATH=./data/disasters_ml_ready.csv
-Substitua SUACHAVEAQUI pela sua chave da API da OpenWeather.
+Substitua SUACHAVEAQUIpela sua chave da API do OpenWeather.
 
 🧠 Treinando o Modelo de ML
 Antes de rodar a aplicação, execute:
 
-bash
-Copy
+festança
+
+Cópia
+
+Editar
 python train_model.py
 Isso treina e salva um modelo para prever o tipo de desastre com base em localização, país, nome do evento e outros atributos históricos.
 
-🌐 Executando a API
-bash
-Copy
+🌐 Executando uma API
+festança
+
+Cópia
+
+Editar
 uvicorn app.main:app --reload
 Abra no navegador: http://127.0.0.1:8000/docs para testar a API interativamente.
 
 📥 Exemplo de Requisição
 json
-Copy
+
+Cópia
+
+Editar
 POST /predict-disaster
 {
   "location": "Japan"
 }
-Resposta esperada:
+Resposta atenciosa:
 
 json
-Copy
+
+Cópia
+
+Editar
 {
   "message": "Previsão para Japan indica condições normais com temperatura de 22°C e clima clear sky.",
   "graph_urls": {
@@ -63,11 +83,14 @@ Copy
   "predicted_disaster_type": "Flood"
 }
 📊 Sobre o Gráfico
-O gráfico gerado (.png) representa os 5 maiores desastres registrados no país informado, com base em número de afetados, extraído do dataset EM-DAT.
+O gráfico gerado ( .png) representa os 5 maiores desastres registrados no país informado, com base em número de afetados, extraído do conjunto de dados EM-DAT.
 
 📁 Estrutura da Aplicação
-bash
-Copy
+festança
+
+Cópia
+
+Editar
 IA_global/
 ├── app/
 │   └── main.py
@@ -86,7 +109,7 @@ FastAPI 0.110+
 scikit-learn, pandas, matplotlib, python-dotenv
 
 👨‍🏫 Ideal para entrega acadêmica
-Você pode enviar este projeto diretamente ao professor. Ele está estruturado com:
+Você pode enviar este projeto diretamente ao professor. Ele está estruturado como:
 
 API funcional
 
@@ -99,7 +122,7 @@ Documentação clara e reproduzível
 📺 Vídeo de Demonstração
 Confira a demonstração completa do projeto no YouTube:
 
-
+https://www.youtube.com/watch?v=QR8c_XG6krQ
 
 🌍 Repositório no GitHub
 O código completo do projeto está disponível no GitHub:
